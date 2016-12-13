@@ -1,0 +1,13 @@
+package: github.com/enaml-ops/ert-transform
+import:
+- package: github.com/enaml-ops/enaml
+  version: ~0.0.17
+- package: github.com/enaml-ops/omg-transform
+  version: master 
+  subpackages:
+  - manifest
+testImport:
+- package: github.com/onsi/ginkgo
+  version: ~1.2.0
+- package: github.com/onsi/gomega
+  version: ~1.0.0

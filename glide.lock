@@ -1,0 +1,112 @@
+hash: 9d76ee5749b0536f6d7f2db3bc970d8ea6d0b5d3f6a1145842affabf195d285d
+updated: 2016-12-13T13:32:23.322425807-05:00
+imports:
+- name: github.com/enaml-ops/enaml
+  version: daa906ffdfea29e28f26a5965100f645736de450
+- name: github.com/enaml-ops/omg-product-bundle
+  version: ad22bb51c9ff0c2c3bf13d32c141fe6e2a03c2df
+  subpackages:
+  - cli
+  - products/cf-mysql/enaml-gen/bootstrap
+  - products/cf-mysql/enaml-gen/mysql
+  - products/cf-mysql/enaml-gen/proxy
+  - products/cloudfoundry/enaml-gen/acceptance-tests
+  - products/cloudfoundry/enaml-gen/auctioneer
+  - products/cloudfoundry/enaml-gen/bbs
+  - products/cloudfoundry/enaml-gen/cc_uploader
+  - products/cloudfoundry/enaml-gen/cloud_controller_clock
+  - products/cloudfoundry/enaml-gen/cloud_controller_ng
+  - products/cloudfoundry/enaml-gen/cloud_controller_worker
+  - products/cloudfoundry/enaml-gen/consul_agent
+  - products/cloudfoundry/enaml-gen/converger
+  - products/cloudfoundry/enaml-gen/debian_nfs_server
+  - products/cloudfoundry/enaml-gen/deploy-autoscaling
+  - products/cloudfoundry/enaml-gen/deploy-notifications
+  - products/cloudfoundry/enaml-gen/deploy-notifications-ui
+  - products/cloudfoundry/enaml-gen/destroy-broker
+  - products/cloudfoundry/enaml-gen/doppler
+  - products/cloudfoundry/enaml-gen/etcd
+  - products/cloudfoundry/enaml-gen/etcd_metrics_server
+  - products/cloudfoundry/enaml-gen/file_server
+  - products/cloudfoundry/enaml-gen/garden
+  - products/cloudfoundry/enaml-gen/gorouter
+  - products/cloudfoundry/enaml-gen/haproxy
+  - products/cloudfoundry/enaml-gen/loggregator_trafficcontroller
+  - products/cloudfoundry/enaml-gen/metron_agent
+  - products/cloudfoundry/enaml-gen/nats
+  - products/cloudfoundry/enaml-gen/nfs_mounter
+  - products/cloudfoundry/enaml-gen/nsync
+  - products/cloudfoundry/enaml-gen/push-apps-manager
+  - products/cloudfoundry/enaml-gen/register-broker
+  - products/cloudfoundry/enaml-gen/rep
+  - products/cloudfoundry/enaml-gen/route_emitter
+  - products/cloudfoundry/enaml-gen/route_registrar
+  - products/cloudfoundry/enaml-gen/smoke-tests
+  - products/cloudfoundry/enaml-gen/ssh_proxy
+  - products/cloudfoundry/enaml-gen/stager
+  - products/cloudfoundry/enaml-gen/syslog_drain_binder
+  - products/cloudfoundry/enaml-gen/test-autoscaling
+  - products/cloudfoundry/enaml-gen/test-notifications
+  - products/cloudfoundry/enaml-gen/test-notifications-ui
+  - products/cloudfoundry/enaml-gen/tps
+  - products/cloudfoundry/enaml-gen/uaa
+  - products/cloudfoundry/plugin
+  - products/cloudfoundry/plugin/config
+- name: github.com/enaml-ops/omg-transform
+  version: f8a205e8f73b7fad9f00ad83e2870eee599cb1d6
+  subpackages:
+  - manifest
+- name: github.com/enaml-ops/pluginlib
+  version: f028e11551e7f7e4732dbe1dc690ca867eca0e6c
+  subpackages:
+  - cred
+  - pcli
+  - pluginutil
+  - productv1
+- name: github.com/hashicorp/go-plugin
+  version: 8cf118f7a2f0c7ef1c82f66d4f6ac77c7e27dc12
+- name: github.com/hashicorp/yamux
+  version: d1caa6c97c9fc1cc9e83bbe34d0603f9ff0ce8bd
+- name: github.com/op/go-logging
+  version: 970db520ece77730c7e4724c61121037378659d9
+- name: github.com/square/certstrap
+  version: b6aef507a0840bf78bac99e7ffa6e6eb5c2c3c9f
+  subpackages:
+  - pkix
+- name: github.com/xchapter7x/lo
+  version: e33b245fc7a8186582208abc2458c2691bff681c
+- name: gopkg.in/urfave/cli.v2
+  version: e485446237011b8abac93919242e6f059ad56c87
+- name: gopkg.in/yaml.v2
+  version: a5b47d31c556af34a302ce5d659e6fea44d90de0
+testImports:
+- name: github.com/onsi/ginkgo
+  version: 462326b1628e124b23f42e87a8f2750e3c4e2d24
+  subpackages:
+  - config
+  - internal/codelocation
+  - internal/containernode
+  - internal/failer
+  - internal/leafnodes
+  - internal/remote
+  - internal/spec
+  - internal/specrunner
+  - internal/suite
+  - internal/testingtproxy
+  - internal/writer
+  - reporters
+  - reporters/stenographer
+  - types
+- name: github.com/onsi/gomega
+  version: a78ae492d53aad5a7a232d0d0462c14c400e3ee7
+  subpackages:
+  - format
+  - internal/assertion
+  - internal/asyncassertion
+  - internal/testingtsupport
+  - matchers
+  - matchers/support/goraph/bipartitegraph
+  - matchers/support/goraph/edge
+  - matchers/support/goraph/node
+  - matchers/support/goraph/util
+  - types
