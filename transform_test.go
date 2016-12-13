@@ -16,9 +16,11 @@ var _ = Describe("ERTFromOSS", func() {
 		)
 		BeforeEach(func() {
 			manifest = enaml.NewDeploymentManifest(nil)
+			ig := manifest.GetInstanceGroupByName(pushappsmanager.InstanceGroupName)
+			Ω(ig).Should(BeNil())
 		})
 
-		It("adds tags", func() {
+		It("adds and instance group with a job for app-manager", func() {
 			t := &ERTFromOSS{}
 			Ω(t.Apply(manifest)).ShouldNot(HaveOccurred())
 			ig := manifest.GetInstanceGroupByName(pushappsmanager.InstanceGroupName)
