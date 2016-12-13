@@ -5,7 +5,7 @@ package push_apps_manager
 */
 type Databases struct {
 
-	/*AppUsageService - Descr: Database name for the app usage service Default: <nil>
+	/*AppUsageService - Descr: Port of database server for the app usage service Default: <nil>
 */
 	AppUsageService *DatabasesAppUsageService `yaml:"app_usage_service,omitempty"`
 

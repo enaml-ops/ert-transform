@@ -5,44 +5,44 @@ package push_apps_manager
 */
 type Env struct {
 
-	/*CfLoggregatorHttpUrl - Descr: Full URL of Loggregator's HTTP API Default: <nil>
+	/*AppsManagerConfigJson - Descr: White labeling for navigation links Default: [map[name:Marketplace href:/marketplace] map[name:Docs href:http://docs.run.pivotal.io] map[name:Tools href:/tools]]
 */
-	CfLoggregatorHttpUrl interface{} `yaml:"cf_loggregator_http_url,omitempty"`
-
-	/*GenericWhiteLabelConfigJson - Descr: Global Wrapper Background Color Default: #D6D6D6
-*/
-	GenericWhiteLabelConfigJson *GenericWhiteLabelConfigJson `yaml:"generic_white_label_config_json,omitempty"`
-
-	/*CfCcApiUrl - Descr: Full URL of Cloud Foundry API Default: <nil>
-*/
-	CfCcApiUrl interface{} `yaml:"cf_cc_api_url,omitempty"`
+	AppsManagerConfigJson *AppsManagerConfigJson `yaml:"apps_manager_config_json,omitempty"`
 
 	/*SystemOrgQuotaName - Descr: The name of the quota to be assigned to the system org Default: runaway
 */
 	SystemOrgQuotaName interface{} `yaml:"system_org_quota_name,omitempty"`
 
-	/*InvitationsClientSecret - Descr: Client secret for the invitations service Default: 
+	/*CfLoggregatorHttpUrl - Descr: Full URL of Loggregator's HTTP API Default: <nil>
 */
-	InvitationsClientSecret interface{} `yaml:"invitations_client_secret,omitempty"`
+	CfLoggregatorHttpUrl interface{} `yaml:"cf_loggregator_http_url,omitempty"`
 
 	/*UsageServiceHost - Descr: The host for the usage service Default: <nil>
 */
 	UsageServiceHost interface{} `yaml:"usage_service_host,omitempty"`
 
-	/*SecretToken - Descr: Secret token for signing cookies Default: <nil>
+	/*CfCcApiUrl - Descr: Full URL of Cloud Foundry API Default: <nil>
 */
-	SecretToken interface{} `yaml:"secret_token,omitempty"`
-
-	/*CfLoggregatorWebsocketUrl - Descr: Full URL of Loggregator's WebSocket endpoint Default: <nil>
-*/
-	CfLoggregatorWebsocketUrl interface{} `yaml:"cf_loggregator_websocket_url,omitempty"`
+	CfCcApiUrl interface{} `yaml:"cf_cc_api_url,omitempty"`
 
 	/*CfNotificationsServiceUrl - Descr: Full URL of Notifications Service's HTTP API Default: <nil>
 */
 	CfNotificationsServiceUrl interface{} `yaml:"cf_notifications_service_url,omitempty"`
 
-	/*AppsManagerConfigJson - Descr: Display Marketplace Service Plan Prices Default: false
+	/*GenericWhiteLabelConfigJson - Descr: Global Wrapper Footer Content Default: 
 */
-	AppsManagerConfigJson *AppsManagerConfigJson `yaml:"apps_manager_config_json,omitempty"`
+	GenericWhiteLabelConfigJson *GenericWhiteLabelConfigJson `yaml:"generic_white_label_config_json,omitempty"`
+
+	/*SecretToken - Descr: Secret token for signing cookies Default: <nil>
+*/
+	SecretToken interface{} `yaml:"secret_token,omitempty"`
+
+	/*InvitationsClientSecret - Descr: Client secret for the invitations service Default: 
+*/
+	InvitationsClientSecret interface{} `yaml:"invitations_client_secret,omitempty"`
+
+	/*CfLoggregatorWebsocketUrl - Descr: Full URL of Loggregator's WebSocket endpoint Default: <nil>
+*/
+	CfLoggregatorWebsocketUrl interface{} `yaml:"cf_loggregator_websocket_url,omitempty"`
 
 }

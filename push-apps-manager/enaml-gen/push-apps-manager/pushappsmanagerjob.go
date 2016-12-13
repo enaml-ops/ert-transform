@@ -5,28 +5,28 @@ package push_apps_manager
 */
 type PushAppsManagerJob struct {
 
-	/*Services - Descr: Cloud Foundry UAA server URL Default: <nil>
+	/*Cf - Descr: Cloud Foundry apps domain, used for default app domains Default: <nil>
 */
-	Services *Services `yaml:"services,omitempty"`
+	Cf *Cf `yaml:"cf,omitempty"`
+
+	/*Env - Descr: Global Wrapper Footer Content Default: 
+*/
+	Env *Env `yaml:"env,omitempty"`
+
+	/*AppUsageService - Descr: Whether or not to allow manual creation of AppEvents Default: false
+*/
+	AppUsageService *AppUsageService `yaml:"app_usage_service,omitempty"`
+
+	/*Databases - Descr: Port of database server for the app usage service Default: <nil>
+*/
+	Databases *Databases `yaml:"databases,omitempty"`
 
 	/*Ssl - Descr: When displaying external app route urls, prefix all of them with https Default: false
 */
 	Ssl *Ssl `yaml:"ssl,omitempty"`
 
-	/*AppUsageService - Descr: How recent is too recent to trust an event Default: 60
+	/*Services - Descr: UAA client secret for Console application Default: <nil>
 */
-	AppUsageService *AppUsageService `yaml:"app_usage_service,omitempty"`
-
-	/*Env - Descr: Display Marketplace Service Plan Prices Default: false
-*/
-	Env *Env `yaml:"env,omitempty"`
-
-	/*Databases - Descr: Database name for the app usage service Default: <nil>
-*/
-	Databases *Databases `yaml:"databases,omitempty"`
-
-	/*Cf - Descr: Cloud Foundry apps domain, used for default app domains Default: <nil>
-*/
-	Cf *Cf `yaml:"cf,omitempty"`
+	Services *Services `yaml:"services,omitempty"`
 
 }

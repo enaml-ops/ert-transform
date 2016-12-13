@@ -9,6 +9,10 @@ type Cf struct {
 */
 	AdminUsername interface{} `yaml:"admin_username,omitempty"`
 
+	/*AdminPassword - Descr: Password of the admin user Default: <nil>
+*/
+	AdminPassword interface{} `yaml:"admin_password,omitempty"`
+
 	/*ApiUrl - Descr: Full URL of Cloud Foundry API Default: <nil>
 */
 	ApiUrl interface{} `yaml:"api_url,omitempty"`
@@ -16,10 +20,6 @@ type Cf struct {
 	/*SystemDomain - Descr: Cloud Foundry system domain, used for the Console application's URL Default: <nil>
 */
 	SystemDomain interface{} `yaml:"system_domain,omitempty"`
-
-	/*AdminPassword - Descr: Password of the admin user Default: <nil>
-*/
-	AdminPassword interface{} `yaml:"admin_password,omitempty"`
 
 	/*AppsDomain - Descr: Cloud Foundry apps domain, used for default app domains Default: <nil>
 */
