@@ -17,10 +17,11 @@ type ERTFromOSS struct {
 //Apply -- implements transformation interface: will get called to create the transformmed manifest
 func (s *ERTFromOSS) Apply(dm *enaml.DeploymentManifest) error {
 	var err error
-	c := &config.Config{}
-	igc := pushappsmanager.NewPushAppsManager(c)
-	ig := igc.ToInstanceGroup()
-	dm.AddInstanceGroup(ig)
+	c := new(config.Config)
+	addAZs(dm, c)
+	addNetwork(dm, c)
+	addStemcell(dm, c)
+	addAppsManager(dm, c)
 	return err
 }
 
@@ -37,4 +38,32 @@ func ERTFromOSSTransformation(args []string) (manifest.Transformation, error) {
 	fs := s.flagSet()
 	err := fs.Parse(args)
 	return s, err
+}
+
+func addStemcell(dm *enaml.DeploymentManifest, c *config.Config) {
+	if len(dm.Stemcells) > 0 {
+		c.StemcellName = dm.Stemcells[0].Name
+	}
+}
+
+func addNetwork(dm *enaml.DeploymentManifest, c *config.Config) {
+	if len(dm.InstanceGroups) > 0 && len(dm.InstanceGroups[0].Networks) > 0 {
+		c.NetworkName = dm.InstanceGroups[0].Networks[0].Name
+	}
+}
+
+func addAZs(dm *enaml.DeploymentManifest, c *config.Config) {
+	if len(dm.InstanceGroups) > 0 {
+		c.AZs = dm.InstanceGroups[0].AZs
+	}
+}
+
+func addAppsManager(dm *enaml.DeploymentManifest, c *config.Config) {
+	igc := pushappsmanager.NewPushAppsManager(c)
+	ig := igc.ToInstanceGroup()
+	dm.AddInstanceGroup(ig)
+	dm.AddRelease(enaml.Release{
+		Name:    pushappsmanager.PushAppsReleaseName,
+		Version: pushappsmanager.PushAppsReleaseVersion,
+	})
 }

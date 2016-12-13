@@ -1,7 +1,8 @@
 package pushappsmanager
 
 const (
-	PushAppsReleaseName = "pushappreleasename"
-	InstanceGroupName   = "push-apps-manager"
-	InstanceJobName     = "push-apps-manager"
+	InstanceGroupName      = "push-apps-manager"
+	InstanceJobName        = "push-apps-manager"
+	PushAppsReleaseName    = "push-apps-manager-release"
+	PushAppsReleaseVersion = "629.7"
 )
