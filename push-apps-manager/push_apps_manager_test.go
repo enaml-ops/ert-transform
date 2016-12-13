@@ -21,9 +21,6 @@ var _ = Describe("push-apps-manager", func() {
 			controlPortalClientSecret = "portalclientsecret"
 			controlSecretToken        = "secrettoken"
 			controlProxyIP            = "10.1.2.3"
-			controlConsoleDBUser      = "consoledbuser"
-			controlConsoleDBPass      = "consoledbpass"
-			controlAppUsageDBPass     = "appusagedbpassword"
 			controlMySQLAdminPassword = "mysqladmin"
 		)
 
@@ -37,12 +34,7 @@ var _ = Describe("push-apps-manager", func() {
 					PushAppsManagerPassword: controlPushAppsPassword,
 					PortalClientSecret:      controlPortalClientSecret,
 					AppsManagerSecretToken:  controlSecretToken,
-					ConsoleDBPassword:       controlConsoleDBPass,
-					AppUsageDBPassword:      controlAppUsageDBPass,
 					MySQLAdminPassword:      controlMySQLAdminPassword,
-				},
-				User: config.User{
-					ConsoleDBUserName: controlConsoleDBUser,
 				},
 				Certs:         &config.Certs{},
 				InstanceCount: config.InstanceCount{},

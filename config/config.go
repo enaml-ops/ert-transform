@@ -80,5 +80,8 @@ type Config struct {
 }
 
 func (c *Config) MySQLProxyHost() string {
-	return c.MySQLProxyIPs[0]
+	if len(c.MySQLProxyIPs) > 0 {
+		return c.MySQLProxyIPs[0]
+	}
+	return ""
 }

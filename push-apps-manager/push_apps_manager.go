@@ -22,7 +22,7 @@ func NewPushAppsManager(c *config.Config) InstanceGroupCreator {
 
 func (p *pushAppsManager) ToInstanceGroup() *enaml.InstanceGroup {
 	return &enaml.InstanceGroup{
-		Name:      "push-apps-manager",
+		Name:      InstanceGroupName,
 		Instances: 1,
 		VMType:    p.Config.ErrandVMType,
 		Lifecycle: "errand",
@@ -36,7 +36,7 @@ func (p *pushAppsManager) ToInstanceGroup() *enaml.InstanceGroup {
 		},
 		Jobs: []enaml.InstanceJob{
 			{
-				Name:    "push-apps-manager",
+				Name:    InstanceJobName,
 				Release: PushAppsReleaseName,
 				Properties: &pam.PushAppsManagerJob{
 					Cf: &pam.Cf{
